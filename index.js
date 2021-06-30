@@ -9,7 +9,7 @@ const printText = function(times) {
     const duration = obj.duration;
     console.log(`Next pass at ${date} for ${duration} seconds!`);
   }
-}
+};
 
 nextISSTimesForMyLocation((error, passTimes) => {
   if (error) {
@@ -18,3 +18,7 @@ nextISSTimesForMyLocation((error, passTimes) => {
   // success, print out the deets!
   printText(passTimes);
 });
+
+module.exports = {
+  printText
+};
